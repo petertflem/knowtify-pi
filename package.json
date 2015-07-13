@@ -1,0 +1,14 @@
+{
+  "name": "pi",
+  "version": "1.0.0",
+  "description": "The PI component of the system",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Peter Tollnes Flem",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^0.7.2"
+  }
+}
