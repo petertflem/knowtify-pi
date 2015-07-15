@@ -17,7 +17,3 @@ ws.on('close', function () {
   clearInterval(pingId);
   console.log('connection closed by the server');
 });
-
-ws.on('pong', function () {
-  console.log('pong');
-});
