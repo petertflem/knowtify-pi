@@ -1,7 +1,12 @@
 var WebSocket = require('ws');
+var SerialPort = require('serialport').SerialPort;
 
-//var host = 'ws://routing-hub.herokuapp.com';
-var host = 'ws://localhost:5000';
+/*
+ * If no server running, try new connection every x seconds?
+ */
+
+var host = 'ws://routing-hub.herokuapp.com';
+//var host = 'ws://localhost:5000';
 var pingId;
 var ws = new WebSocket(host);
 
@@ -17,3 +22,7 @@ ws.on('close', function () {
   clearInterval(pingId);
   console.log('connection closed by the server');
 });
+
+var serialport = new SerialPort("/dev/ttyACM0", {
+  baudrate: 9600 
+	});
