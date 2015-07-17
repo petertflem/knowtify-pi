@@ -27,12 +27,12 @@ var serialport = new SerialPort("/dev/ttyACM0", {
   baudrate: 9600
 });
 
-serialPort.on("open", function () {
+serialport.on("open", function () {
   console.log('open');
-  serialPort.on('data', function(data) {
+  serialport.on('data', function(data) {
     console.log('data received: ' + data);
   });
-  serialPort.write("Hello", function(err, results) {
+  serialport.write("Hello", function(err, results) {
     console.log('err ' + err);
     console.log('results ' + results);
   });
