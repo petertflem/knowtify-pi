@@ -5,6 +5,8 @@ var host = 'ws://routing-hub.herokuapp.com';
 var openSerialPort;
 
 module.exports.initialize = function(serialPort) {
+  console.log('Initializing web socket...');
+
   var ws = new WebSocket(host);
   var pingId;
 

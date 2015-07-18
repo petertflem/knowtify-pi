@@ -4,6 +4,8 @@ var openSerialPort;
 var fnSerialOpen;
 
 module.exports.initialize = function (serialOpenCallback) {
+  console.log('Initializing serial port...');
+
   fnSerialOpen = serialOpenCallback;
   
   openSerialPort = new SerialPort("/dev/ttyACM0", {
