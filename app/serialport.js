@@ -1,8 +1,11 @@
 var serialport = require('serialport');
 var SerialPort = serialport.SerialPort;
 var openSerialPort;
+var fnSerialOpen;
 
-module.exports.initialize = function (fnSerialOpen) {
+module.exports.initialize = function (serialOpenCallback) {
+  fnSerialOpen = serialOpenCallback;
+  
   openSerialPort = new SerialPort("/dev/ttyACM0", {
     baudrate: 9600,
     parser: serialport.parsers.readline('\r\n')
