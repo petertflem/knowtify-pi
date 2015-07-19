@@ -4,7 +4,7 @@
   "description": "The PI component of the system",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node app/app.js"
   },
   "author": "Peter Tollnes Flem",
   "license": "MIT",
