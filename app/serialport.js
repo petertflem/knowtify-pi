@@ -5,7 +5,7 @@ var fnSerialOpen;
 
 module.exports.initialize = function (serialOpenCallback) {
   fnSerialOpen = serialOpenCallback;
-  
+
   openSerialPort = new SerialPort("/dev/ttyACM0", {
     baudrate: 9600,
     parser: serialport.parsers.readline('\r\n')
