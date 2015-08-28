@@ -1,3 +1,4 @@
+var loggy = require('../git_submodules/loggy');
 var serialport = require('serialport');
 var SerialPort = serialport.SerialPort;
 var openSerialPort;
@@ -24,18 +25,18 @@ module.exports.write = function(data) {
 }
 
 function open () {
-  console.log('Port open. Data rate: ' + openSerialPort.options.baudRate);
+  loggy.info('Port open. Data rate: ' + openSerialPort.options.baudRate);
   fnSerialOpen(openSerialPort);
 }
 
 function data (data) {
-  console.log(data);
+  loggy.info(data);
 }
 
 function close() {
-  console.log('Serial port closed');
+  loggy.info('Serial port closed');
 }
 
 function error (error) {
-  console.log('Serial port error: ' + error);
+  loggy.info('Serial port error: ' + error);
 }
