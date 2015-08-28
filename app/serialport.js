@@ -5,7 +5,7 @@ var openSerialPort;
 var fnSerialOpen;
 
 module.exports.initialize = function (serialOpenCallback) {
-  console.log('Initializing serial port...');
+  loggy.info('Initializing serial port...');
 
   fnSerialOpen = serialOpenCallback;
 
