@@ -2,7 +2,7 @@ var WebSocket = require('ws');
 var loggy = require('../git_submodules/loggy');
 var keepAlive = true;
 var host = 'ws://routing-hub.herokuapp.com';
-//var host = 'ws://localhost:5000';
+//var host = 'ws://localhost:5001';
 var openSerialPort;
 
 module.exports.initialize = function() {
