@@ -1,14 +1,21 @@
 // Configure the logger
-/*require('../git_submodules/loggy').initialize({
-  targetLoggingModules: [{ name: 'httppost' }]
+require('../git_submodules/loggy').initialize({
+  targetLoggingModules: [{
+    name: 'httppost',
+    settings: {
+      http: {
+        targetHostname: 'knowtify-web-app.herokuapp.com',
+        targetPort: '/api/logs',
+        targetPath: '80'
+      }
+    }
+  }]
 });
 
+/*
 require('./serialport').initialize(function (serialPort){
   require('./websocket').initialize(serialPort);
-});*/
-
-require('../git_submodules/loggy').initialize({
-  targetLoggingModules: [{ name: 'console' }]
 });
+*/
 
 require('./websocket0').initialize();

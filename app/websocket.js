@@ -28,7 +28,7 @@ module.exports.initialize = function(serialPort) {
 
 function message(data, flags) {
   loggy.info('Data recieved from Heroku: ' + data);
-  openSerialPort.write(JSON.parse(data)['error-code']);
+  openSerialPort.write(JSON.parse(data)['status']);
 }
 
 function open() {

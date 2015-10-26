@@ -27,7 +27,6 @@ module.exports.initialize = function() {
 
 function message(data, flags) {
   loggy.info('Data recieved from Heroku: ' + data);
-  loggy.info(JSON.parse(data)['error-code']);
 }
 
 function open() {
