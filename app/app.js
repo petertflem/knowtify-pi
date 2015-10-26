@@ -5,8 +5,8 @@ require('../git_submodules/loggy').initialize({
     settings: {
       http: {
         targetHostname: 'knowtify-web-app.herokuapp.com',
-        targetPort: '/api/logs',
-        targetPath: '80'
+        targetPort: '80',
+        targetPath: '/api/logs'
       }
     }
   }]
