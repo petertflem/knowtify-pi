@@ -1,16 +1,16 @@
 var WebSocket = require('ws');
-var loggy = require('../git_submodules/loggy');
+//var loggy = require('../git_submodules/loggy');
 var keepAlive = true;
 var host = 'ws://routing-hub.herokuapp.com';
-var openSerialPort;
+//var openSerialPort;
 
-module.exports.initialize = function(serialPort) {
+module.exports.initialize = function() {
   loggy.info('Initializing web socket...');
 
   var ws = new WebSocket(host);
   var pingId;
 
-  openSerialPort = serialPort;
+  //openSerialPort = serialPort;
 
   ws.on('message', message);
 
@@ -28,7 +28,7 @@ module.exports.initialize = function(serialPort) {
 
 function message(data, flags) {
   loggy.info('Data recieved from Heroku: ' + data);
-  openSerialPort.write(JSON.parse(data)['status']);
+  //openSerialPort.write(JSON.parse(data)['status']);
 }
 
 function open() {
