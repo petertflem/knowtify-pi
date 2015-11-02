@@ -1,5 +1,5 @@
 // Configure the logger
-require('../git_submodules/loggy').initialize({
+/*require('../git_submodules/loggy').initialize({
   targetLoggingModules: [{
     name: 'httppost',
     settings: {
@@ -10,7 +10,9 @@ require('../git_submodules/loggy').initialize({
       }
     }
   }]
-});
+});*/
+
+require('./websocket').initialize();
 
 /*
 require('./serialport').initialize(function (serialPort){
@@ -18,4 +20,4 @@ require('./serialport').initialize(function (serialPort){
 });
 */
 
-require('./websocket0').initialize();
+//require('./websocket0').initialize();
